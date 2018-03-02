@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-12">
+      <p>{{'use the text boxes to insert or edit a product'}}</p>
+      <p>name:<input type ="text" id="n"></p>
+      <p>price:<input type ="number" id="p"></p>
+    <p>
+      <button (click)="insertTuple()" class="btn btn-primary">Insert Tuple</button>
+    </p>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+      <table class="table">
+          <tr>
+              <th>name</th>
+              <th></th>
+              <th>price</th> 
+              <th>createdAt</th>
+              <th>updatedAt</th>
+              <th>Delete</th>
+              <th>Edit</th>
+          </tr>
+      <tr *ngFor="let item of items;let j=index" >
+        
+              <td> {{item.name}} </td>>
+              <td>{{item.price}}</td>
+              <td>{{item.createdAt}}</td>
+              <td>{{item.updatedAt}}</td>
+
+              <td><button (click)="deleteTuple(item)" class="btn btn-danger">Delete Tuple</button><br></td>
+            <td><button (click)="editTuple(item)" class="btn btn-info">Edit Tuple</button></td>
+          </tr>
+        </table>
+        </div>
+    </div>

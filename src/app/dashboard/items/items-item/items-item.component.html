@@ -1,0 +1,16 @@
+<nb-card style="padding:10px">
+    <div>
+  
+      <div class="float-left">
+        <h4> {{item.id}}</h4>
+        <p> {{item.name}} </p>
+        <p> {{item.price}} </p>
+        <p> {{item.createdAt}} </p>
+        <p> {{item.updatedAt}} </p>
+        <p> {{item.SellerName}} </p>
+      </div>
+      <div class="float-right"> 
+          <button (click)="deleteTuple()" class="form-control btn btn-success">Delete Tuple</button>
+      </div>
+    </div>
+  </nb-card>
